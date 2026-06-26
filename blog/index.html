@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Blog de Topografía en México | Guías y Precios</title>
-<meta content="Guías de topografía en México: costos, procesos, requisitos legales y cuándo necesitas un topógrafo con cédula SEP." name="description"/>
+<title>Blog de Topografía en México | Guías, Precios y Requisitos SEP</title>
+<meta content="Guías prácticas sobre topografía en México: levantamientos, catastro, cédula SEP, LGAHOTDU e ITRF2008. Todo lo que necesitas saber antes de contratar." name="description"/>
 <link href="https://topografomexico.com.mx/blog/" rel="canonical"/>
 <link href="favicon.ico" rel="icon" type="image/x-icon"/>
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="favicon.ico" rel="apple-touch-icon"/>
 <meta content="index, follow" name="robots"/>
-<meta content="Blog de Topografía en México | Guías y Precios" property="og:title"/>
-<meta content="Guías de topografía en México: costos, procesos, requisitos legales y cuándo necesitas un topógrafo con cédula SEP." property="og:description"/>
+<meta content="Blog de Topografía en México | Guías, Precios y Requisitos SEP" property="og:title"/>
+<meta content="Guías prácticas sobre topografía en México: levantamientos, catastro, cédula SEP, LGAHOTDU e ITRF2008. Todo lo que necesitas saber antes de contratar." property="og:description"/>
 <meta content="https://topografomexico.com.mx/og.jpg" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
@@ -20,18 +20,36 @@
 <meta content="https://topografomexico.com.mx/blog/" property="og:url"/>
 <link href="../styles-topografo.css" rel="stylesheet"/>
 <style>
-  .blog-hero{padding:60px 0 40px;border-bottom:1px solid var(--line)}
-  .blog-hero h1{font-family:var(--serif);font-size:clamp(32px,5vw,52px);font-weight:800;margin-bottom:12px}
-  .blog-hero p{font-size:18px;color:var(--ink-2);max-width:38em}
-  .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;padding:60px 0}
-  .blog-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:10px}
-  .bc-date{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.05em}
-  .blog-card h2{font-family:var(--serif);font-size:20px;font-weight:700;line-height:1.3}
-  .blog-card h2 a{color:var(--ink);text-decoration:none}
-  .blog-card h2 a:hover{color:var(--brand-deep)}
-  .blog-card p{font-size:14px;color:var(--ink-2);line-height:1.65;flex:1}
-  .bc-link{font-family:var(--mono);font-size:12px;color:var(--brand-deep);font-weight:600;text-decoration:none}
-  .bc-link:hover{text-decoration:underline}
+  .bhero{{position:relative;border-bottom:1px solid var(--line);overflow:hidden;background:radial-gradient(800px 340px at 82% -12%,rgba(20,184,190,.1),transparent 60%),linear-gradient(180deg,#fbfdfc,#f3f7f6)}}
+  .bhero .grid-bg{{position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(circle at 80% 30%,#000,transparent 80%);pointer-events:none}}
+  .bhero-in{{position:relative;padding:42px 0 44px;max-width:720px}}
+  .bhero h1{{font-family:var(--serif);font-size:clamp(34px,4.4vw,52px);font-weight:800;letter-spacing:-.01em;line-height:1.05;margin-top:12px}}
+  .bhero p{{font-size:18px;color:var(--ink-2);margin-top:14px;max-width:34em}}
+  .feat{{display:grid;grid-template-columns:1.05fr .95fr;gap:0;background:var(--panel);border:1px solid var(--line-2);border-radius:16px;overflow:hidden;margin:46px 0;box-shadow:0 30px 60px -44px rgba(13,27,46,.4);text-decoration:none;transition:.16s}}
+  .feat:hover{{border-color:var(--brand);box-shadow:0 30px 60px -30px rgba(13,148,136,.35)}}
+  .feat .vis{{position:relative;background:linear-gradient(160deg,#0d1b2e,#13294b);min-height:280px;overflow:hidden}}
+  .feat .vis .g{{position:absolute;inset:0;background-image:linear-gradient(rgba(20,184,190,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(20,184,190,.16) 1px,transparent 1px);background-size:34px 34px}}
+  .feat .vis .cx{{position:absolute;color:#14b8be}}
+  .feat .vis .cx::before,.feat .vis .cx::after{{content:"";position:absolute;background:currentColor;opacity:.8}}
+  .feat .vis .cx::before{{left:-9px;top:0;width:19px;height:1px}}.feat .vis .cx::after{{top:-9px;left:0;height:19px;width:1px}}
+  .feat .vis .coord{{position:absolute;left:24px;bottom:22px;font-family:var(--mono);font-size:12px;color:#9fe6e2;letter-spacing:.05em}}
+  .feat .vis .tag{{position:absolute;right:24px;top:22px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:#9fe6e2;border:1px solid rgba(159,230,226,.4);border-radius:5px;padding:5px 10px;text-transform:uppercase}}
+  .feat .bd{{padding:34px 36px;display:flex;flex-direction:column;justify-content:center}}
+  .chip{{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-deep);border:1px solid var(--line-2);border-radius:5px;padding:4px 9px;display:inline-block}}
+  .feat .bd h2{{font-family:var(--serif);font-size:30px;font-weight:800;line-height:1.1;margin:14px 0 12px;color:var(--navy)}}
+  .feat .bd p{{font-size:15.5px;color:var(--ink-2);line-height:1.65;margin-bottom:18px}}
+  .meta{{font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;gap:14px}}
+  .grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-bottom:70px}}
+  .card{{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:.16s;text-decoration:none}}
+  .card:hover{{border-color:var(--brand);transform:translateY(-4px);box-shadow:0 22px 44px -30px rgba(13,148,136,.5)}}
+  .card .vis{{position:relative;height:120px;background:linear-gradient(160deg,#0d1b2e,#13294b);border-bottom:1px solid var(--line);overflow:hidden}}
+  .card .vis .g{{position:absolute;inset:0;background-image:linear-gradient(rgba(20,184,190,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(20,184,190,.14) 1px,transparent 1px);background-size:26px 26px}}
+  .card .vis .num{{position:absolute;right:16px;bottom:6px;font-family:var(--serif);font-size:52px;font-weight:700;color:rgba(255,255,255,.1);line-height:1}}
+  .card .bd{{padding:18px 20px 20px;flex:1;display:flex;flex-direction:column}}
+  .card h2{{font-family:var(--serif);font-size:19px;font-weight:700;line-height:1.18;margin:10px 0 8px;color:var(--navy)}}
+  .card p{{font-size:13.5px;color:var(--ink-2);line-height:1.6;flex:1;margin-bottom:14px}}
+  @media(max-width:980px){{.feat{{grid-template-columns:1fr}}.feat .vis{{min-height:180px}}.grid{{grid-template-columns:1fr 1fr}}}}
+  @media(max-width:560px){{.grid{{grid-template-columns:1fr}}}}
 </style>
 </head>
 <body>
@@ -55,34 +73,106 @@
 </header>
 <script>(function(){var btn=document.getElementById('nav-toggle');var nav=document.getElementById('main-nav');if(!btn||!nav)return;btn.addEventListener('click',function(){var open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);btn.innerHTML=open?'<svg width="22" height="22" viewBox="0 0 22 22" fill="none"><line x1="3" y1="3" x2="19" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="19" y1="3" x2="3" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>':'<svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="currentColor"/><rect y="10" width="22" height="2" rx="1" fill="currentColor"/><rect y="16" width="22" height="2" rx="1" fill="currentColor"/></svg>';});nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.innerHTML='<svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="currentColor"/><rect y="10" width="22" height="2" rx="1" fill="currentColor"/><rect y="16" width="22" height="2" rx="1" fill="currentColor"/></svg>';});});})();</script>
 <main>
-<div class="wrap">
-<div class="blog-hero">
-<h1>Blog de Topografía</h1>
-<p>Guías, costos y requisitos legales para levantamientos topográficos en los 32 estados de México.</p>
-</div>
-<div class="blog-grid">
-<article class="blog-card">
-  <div class="bc-date">2026-06-01</div>
-  <h2><a href="/blog/cuanto-cuesta-levantamiento-topografico-mexico/">¿Cuánto cuesta un levantamiento topográfico en México?</a></h2>
-  <p>El precio de un levantamiento topográfico en México varía entre $2,500 y $35,000 MXN según la superficie, orografía y estado. Conoce los factores que determinan el costo.</p>
-  <a class="bc-link" href="/blog/cuanto-cuesta-levantamiento-topografico-mexico/">Leer artículo →</a>
-</article>
+  <section class="bhero">
+    <div class="grid-bg"></div>
+    <div class="wrap"><div class="bhero-in">
+      <span class="chip">TOPOGRAFÍA · GUÍAS</span>
+      <h1>Topografía en México,<br>explicada sin rodeos.</h1>
+      <p>Guías prácticas sobre levantamientos, catastro, cédula SEP y legislación — escritas para que sepas exactamente qué necesitas antes de contratar.</p>
+    </div></div>
+  </section>
 
-<article class="blog-card">
-  <div class="bc-date">2026-06-10</div>
-  <h2><a href="/blog/como-funciona-levantamiento-topografico/">¿Cómo funciona un levantamiento topográfico en México?</a></h2>
-  <p>Del pedido al plano en 4 pasos: trabajo de campo, cálculo, elaboración y entrega en DWG + PDF firmado por topógrafo con cédula SEP.</p>
-  <a class="bc-link" href="/blog/como-funciona-levantamiento-topografico/">Leer artículo →</a>
-</article>
+  <div class="wrap">
+    <a class="feat" href="/guia-topografia">
+      <div class="vis">
+        <div class="g"></div>
+        <span class="cx" style="left:30%;top:40%"></span><span class="cx" style="left:64%;top:60%"></span>
+        <span class="tag">GUÍA COMPLETA</span>
+        <span class="coord">LAT 19.4326 · LON -99.1332 · ITRF2008</span>
+      </div>
+      <div class="bd">
+        <span class="chip">GUÍA ESENCIAL</span>
+        <h2>Guía de Topografía en México 2026, LGAHOTDU, Catastro y Cédula SEP</h2>
+        <p>Todo lo que necesitas saber: cuándo es obligatorio el topógrafo, qué legislación aplica, qué exige el catastro y la notaría, y cómo verificar la cédula SEP.</p>
+        <div class="meta"><span>Junio 2026</span><span>15 min de lectura</span></div>
+      </div>
+    </a>
 
-<article class="blog-card">
-  <div class="bc-date">2026-06-15</div>
-  <h2><a href="/blog/cuando-necesitas-topografo-mexico/">¿Cuándo necesitas un topógrafo en México?</a></h2>
-  <p>Licencias de construcción, subdivisiones, deslindes de predios, trazo de obra. Los casos más frecuentes donde el catastro o la notaría exigen firma de topógrafo con cédula SEP.</p>
-  <a class="bc-link" href="/blog/cuando-necesitas-topografo-mexico/">Leer artículo →</a>
-</article>
-</div>
-</div>
+    <div class="grid">
+      <a class="card" href="/blog/cuando-necesitas-topografo-mexico/">
+        <div class="vis"><div class="g"></div><span class="num">01</span></div>
+        <div class="bd">
+          <span class="chip">LEGISLACIÓN</span>
+          <h2>¿Cuándo es obligatorio contratar un topógrafo en México?</h2>
+          <p>LGAHOTDU, catastro, notarías: los marcos legales que exigen firma de topógrafo con cédula SEP, con los casos más habituales explicados sin tecnicismos.</p>
+          <div class="meta"><span>Junio 2026</span><span>6 min de lectura</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/cedula-profesional-sep-topografo/">
+        <div class="vis"><div class="g"></div><span class="num">02</span></div>
+        <div class="bd">
+          <span class="chip">PROFESIÓN</span>
+          <h2>Cédula profesional SEP: por qué es indispensable para tu topógrafo</h2>
+          <p>Sin cédula SEP ningún plano tiene validez ante catastro o notaría. Cómo verificarla, qué datos debe incluir y por qué es tu principal garantía.</p>
+          <div class="meta"><span>Junio 2026</span><span>5 min de lectura</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/catastro-vs-registro-publico-mexico/">
+        <div class="vis"><div class="g"></div><span class="num">03</span></div>
+        <div class="bd">
+          <span class="chip">CATASTRO</span>
+          <h2>Catastro vs. Registro Público de la Propiedad: diferencias y discrepancias</h2>
+          <p>¿Por qué la superficie en tu escritura no coincide con la del catastro? Cómo funciona cada institución y cómo el topógrafo corrige la discrepancia.</p>
+          <div class="meta"><span>Junio 2026</span><span>7 min de lectura</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/itrf2008-sistema-coordenadas-mexico/">
+        <div class="vis"><div class="g"></div><span class="num">04</span></div>
+        <div class="bd">
+          <span class="chip">TÉCNICO</span>
+          <h2>ITRF2008: el sistema de coordenadas oficial en México (INEGI)</h2>
+          <p>¿Por qué los planos topográficos en México deben estar en ITRF2008? Qué es este sistema geodésico y qué significa para tu levantamiento.</p>
+          <div class="meta"><span>Junio 2026</span><span>6 min de lectura</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/que-es-la-topografia/">
+        <div class="vis"><div class="g"></div><span class="num">05</span></div>
+        <div class="bd">
+          <span class="chip">INTRODUCCIÓN</span>
+          <h2>¿Qué es la topografía? Definición, tipos y para qué sirve</h2>
+          <p>La topografía mide y representa el terreno con precisión. Qué es, para qué sirve, qué tipos de levantamiento existen y cuándo necesitas un topógrafo.</p>
+          <div class="meta"><span>Junio 2026</span><span>8 min de lectura</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/cuanto-cuesta-levantamiento-topografico-mexico/">
+        <div class="vis"><div class="g"></div><span class="num">06</span></div>
+        <div class="bd">
+          <span class="chip">PRECIOS</span>
+          <h2>¿Cuánto cuesta un levantamiento topográfico en México?</h2>
+          <p>Los factores que determinan el precio: tipo de trabajo, superficie, orografía, estado y acceso al predio. Qué debe incluir siempre una cotización seria.</p>
+          <div class="meta"><span>Junio 2026</span><span>8 min de lectura</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/tramites-que-requieren-topografo-mexico/">
+        <div class="vis"><div class="g"></div><span class="num">07</span></div>
+        <div class="bd">
+          <span class="chip">TRÁMITES</span>
+          <h2>¿Qué trámites urbanísticos y catastrales requieren topógrafo en México?</h2>
+          <p>Lista completa: licencias de construcción, subdivisiones, deslindes de predios, fusiones y regularizaciones que exigen firma de topógrafo con cédula SEP.</p>
+          <div class="meta"><span>Junio 2026</span><span>9 min de lectura</span></div>
+        </div>
+      </a>
+      <a class="card" href="/blog/topografia-con-dron-mexico/">
+        <div class="vis"><div class="g"></div><span class="num">08</span></div>
+        <div class="bd">
+          <span class="chip">TECNOLOGÍA</span>
+          <h2>Topografía con dron en México: cuándo conviene y cuándo no</h2>
+          <p>Los drones aceleran levantamientos en superficies grandes, pero no reemplazan al topógrafo con GPS en predios urbanos pequeños. Cuándo usar cada método.</p>
+          <div class="meta"><span>Junio 2026</span><span>7 min de lectura</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
 </main>
 <footer>
 <div class="wrap">
