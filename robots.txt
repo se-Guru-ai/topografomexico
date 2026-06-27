@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /gracias/
 
-Sitemap: https://topografomexico.com.mx/sitemap.xml
+Sitemap: https://www.topografomexico.com.mx/sitemap.xml
