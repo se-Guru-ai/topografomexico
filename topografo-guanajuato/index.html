@@ -176,8 +176,9 @@
 </section>
 </div>
 <aside class="sidebar" id="contacto">
-<form action="/gracias/" class="side-form" data-netlify="true" method="POST" name="pedido-guanajuato">
-<input name="form-name" type="hidden" value="pedido-guanajuato"/><input name="estado" type="hidden" value="Guanajuato"/>
+<form action="/gracias/" class="side-form" data-netlify="true" data-netlify-honeypot="bot-field" method="POST" name="pedido-guanajuato">
+<input name="form-name" type="hidden" value="pedido-guanajuato"/>
+<input name="bot-field" type="hidden" /><input name="estado" type="hidden" value="Guanajuato"/>
 <h3>Solicitar cotización</h3>
 <p class="sub">// estado: Guanajuato · respuesta &lt; 24h hábiles</p>
 <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" placeholder="Tu nombre" required type="text"/></div>
