@@ -172,17 +172,17 @@
 </section>
 </div>
 <aside class="sidebar" id="contacto">
-<form action="/gracias/" class="side-form" data-netlify="true" data-netlify-honeypot="bot-field" method="POST" name="pedido-colima">
+<form class="side-form" name="pedido-colima" data-netlify="true" data-netlify-honeypot="bot-field" action="/gracias/" method="POST">
 <input name="form-name" type="hidden" value="pedido-colima"/>
 <input name="bot-field" type="hidden" /><input name="estado" type="hidden" value="Colima"/>
 <h3>Solicitar cotización</h3>
-<p class="sub">// estado: Colima · respuesta &lt; 24h hábiles</p>
-<div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" placeholder="Tu nombre" required type="text"/></div>
-<div class="field"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" placeholder="55 1234 5678" type="tel"/></div>
-<div class="field"><label for="email">Email</label><input id="email" name="email" placeholder="email@ejemplo.com.mx" required type="email"/></div>
-<div class="field"><label for="tipo">Tipo de trabajo</label><select id="tipo" name="tipo" required><option value="">¿Qué necesitas?</option><option value="Levantamiento topográfico">Levantamiento topográfico</option><option value="Deslinde de predios">Deslinde de predios</option><option value="Subdivisión de lotes">Subdivisión de lotes</option><option value="Trazo y nivelación">Trazo y nivelación</option><option value="Topografía con dron">Topografía con dron</option><option value="No sé">No sé</option><option value="Otros">Otros</option></select></div>
-<div class="field"><label for="descripcion">Descripción</label><textarea id="descripcion" name="descripcion" placeholder="Superficie aproximada y finalidad..." rows="3"></textarea></div>
-<button class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Enviar Pedido →</button>
+<p class="sub">// estado: Colima · respuesta &lt; 24h</p>
+<div class="field"><label>Nombre</label><input name="nome" type="text" placeholder="Tu nombre" required/></div>
+<div class="field"><label>Teléfono</label><input name="telefone" type="tel" placeholder="55 1234 5678" required/></div>
+<div class="field"><label>Email</label><input name="email" type="email" placeholder="email@ejemplo.com.mx" required/></div>
+<div class="field"><label>Tipo de trabajo</label><select name="tipo" required><option value="">¿Qué necesitas?</option><option value="Levantamiento topográfico">Levantamiento topográfico</option><option value="Deslinde de predios">Deslinde de predios</option><option value="Subdivisión de lotes">Subdivisión de lotes</option><option value="Trazo y nivelación">Trazo y nivelación</option><option value="Topografía con dron">Topografía con dron</option><option value="No sé">No sé</option><option value="Otros">Otros</option></select></div>
+<div class="field"><label>Superficie y finalidad</label><textarea name="descripcion" placeholder="Superficie aproximada y finalidad..." rows="3"></textarea></div>
+<button class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Enviar pedido →</button>
 </form>
 <div class="side-info">
 <h4>Qué está incluido</h4>
