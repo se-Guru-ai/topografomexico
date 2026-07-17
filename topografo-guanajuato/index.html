@@ -35,47 +35,6 @@
   {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto cuesta un topógrafo en Guanajuato?","acceptedAnswer":{"@type":"Answer","text":"Solicita cotización gratuita con respuesta normalmente en menos de 24 horas hábiles. El precio depende de la superficie, orografía y tipo de trabajo."}},{"@type":"Question","name":"¿El topógrafo en Guanajuato debe tener cédula SEP?","acceptedAnswer":{"@type":"Answer","text":"Sí. Para que el plano tenga validez ante el catastro de Guanajuato, la notaría o el Registro Público de la Propiedad, debe estar firmado por profesionista con cédula SEP activa."}},{"@type":"Question","name":"¿Qué municipios de Guanajuato cubren?","acceptedAnswer":{"@type":"Answer","text":"Cubrimos todas las zonas de Guanajuato, incluyendo los municipios listados. Envía tu pedido indicando la zona exacta."}},{"@type":"Question","name":"¿Cuánto tarda el levantamiento en Guanajuato?","acceptedAnswer":{"@type":"Answer","text":"Para predios urbanos de hasta 1,000 m², el trabajo de campo se completa en media jornada. El plano se entrega en 5 a 8 días hábiles."}},{"@type":"Question","name":"¿Los parques industriales del Bajío (Silao, Celaya) requieren alguna certificación especial del levantamiento?","acceptedAnswer":{"@type":"Answer","text":"Los parques industriales certificados exigen levantamientos en ITRF2008 con equipos de calibración vigente y topógrafo con cédula SEP. Algunos desarrolladores solicitan adicionalmente enlace a la Red Geodésica Nacional Activa (RGNA) del INEGI para validar las coordenadas ante autoridades estatales y federales."}},{"@type":"Question","name":"¿El catastro de León tiene algún procedimiento especial para fraccionamientos en la periferia de la ciudad?","acceptedAnswer":{"@type":"Answer","text":"Sí. El municipio de León cuenta con programa de regularización de fraccionamientos periféricos. El plano topográfico debe elaborarse conforme al padrón catastral actualizado y entregarse ante la Dirección de Catastro acompañado de la identificación del predio en el sistema municipal de información geográfica."}}]}
 ]}</script>
 <link href="/styles-topografo.css" rel="stylesheet"/>
-<style>
-  .breadcrumb{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.03em;padding:22px 0 0;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-  .breadcrumb a:hover{color:var(--brand-deep)} .breadcrumb .sep{color:var(--line-2)} .breadcrumb b{color:var(--ink)}
-  .dhero{position:relative;border-bottom:1px solid var(--line);overflow:hidden;background:radial-gradient(800px 360px at 80% -10%,rgba(20,184,190,.1),transparent 60%),linear-gradient(180deg,#fbfdfc,#f3f7f6)}
-  .dhero .grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(circle at 75% 30%,#000,transparent 78%);pointer-events:none}
-  .dhero-in{position:relative;padding:30px 0 54px;max-width:760px}
-  .badge-soon{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:#92400e;background:#fef3c7;border:1px solid #fcd34d;border-radius:999px;padding:6px 13px;margin-bottom:18px}
-  .dhero h1{font-family:var(--serif);font-size:clamp(38px,5vw,60px);font-weight:800;letter-spacing:-.01em;line-height:1.04}
-  .dhero h1 em{font-style:normal;color:var(--brand-deep)}
-  .dhero p{font-size:18px;color:var(--ink-2);margin-top:16px;max-width:34em}
-  .dhero-cta{display:flex;gap:13px;margin-top:26px;flex-wrap:wrap}
-  .dhero-meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:30px;padding-top:22px;border-top:1px solid var(--line)}
-  .dhero-meta .t b{font-family:var(--disp);font-size:21px;font-weight:600;color:var(--navy)}
-  .dhero-meta .t small{display:block;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em;margin-top:2px}
-  .layout{display:grid;grid-template-columns:1fr 360px;gap:46px;align-items:start;padding:60px 0 0}
-  .col-main > section{margin-bottom:48px}
-  .col-main h2{font-family:var(--serif);font-size:28px;font-weight:700;margin-bottom:6px}
-  .col-main .lede{font-size:15.5px;color:var(--ink-2);margin-bottom:22px;max-width:64ch;line-height:1.7}
-  .conc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-  .conc{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 13px;font-size:13.5px;font-weight:500}
-  .conc::before{content:"✓";color:var(--ok);font-weight:700;font-size:12px}
-  .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .work{background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--brand);border-radius:0 10px 10px 0;padding:18px 20px}
-  .work h4{font-family:var(--disp);font-size:15px;font-weight:600;margin-bottom:6px}
-  .work p{font-size:13.5px;color:var(--ink-2);line-height:1.6}
-  .sidebar{position:sticky;top:84px;display:flex;flex-direction:column;gap:18px}
-  .side-form{background:var(--panel);border:1px solid var(--line-2);border-radius:14px;padding:24px;box-shadow:0 30px 60px -42px rgba(13,27,46,.35)}
-  .side-form h3{font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:4px}
-  .side-form .sub{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-bottom:18px}
-  .side-info{background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:20px}
-  .side-info h4{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-bottom:14px}
-  .irow{display:flex;gap:11px;align-items:flex-start;padding:9px 0;border-bottom:1px dashed var(--line);font-size:13px;color:var(--ink-2)}
-  .irow:last-child{border-bottom:0} .irow svg{flex:0 0 auto;margin-top:1px;color:var(--brand-deep)} .irow b{color:var(--ink);font-weight:600}
-  .side-links a{display:flex;align-items:center;justify-content:space-between;font-size:13.5px;font-weight:500;padding:9px 0;border-bottom:1px dashed var(--line)}
-  .side-links a:last-child{border-bottom:0} .side-links a:hover{color:var(--brand-deep)}
-  .side-links .ok{font-family:var(--mono);font-size:10px;color:var(--ok);text-transform:uppercase;letter-spacing:.04em}
-  .ctaband{padding:74px 0;text-align:center;background:linear-gradient(170deg,#eef4f3,#f3f7f6)}
-  .ctaband h2{font-family:var(--serif);font-size:clamp(28px,3.4vw,42px);font-weight:800;margin-bottom:12px}
-  .ctaband p{font-size:17px;color:var(--ink-2);margin-bottom:28px}
-  @media(max-width:780px){.layout{grid-template-columns:1fr}.sidebar{position:static}.conc-grid{grid-template-columns:1fr 1fr}.work-grid{grid-template-columns:1fr}}
-</style>
 </head>
 <body>
 <header>
