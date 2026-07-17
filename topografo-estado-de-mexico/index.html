@@ -32,10 +32,7 @@
 <script type="application/ld+json">{
 "@context":"https://schema.org","@graph":[
   {"@type":"ProfessionalService","name":"Topógrafo Certificado — Estado de México","description":"Servicios de topografía y levantamiento topográfico en Estado de México","areaServed":{"@type":"AdministrativeArea","name":"Estado de México","containsPlace":[{"@type":"City","name":"Ecatepec"},{"@type":"City","name":"Naucalpan"},{"@type":"City","name":"Tlalnepantla"},{"@type":"City","name":"Nezahualcóyotl"},{"@type":"City","name":"Toluca"},{"@type":"City","name":"Chimalhuacán"},{"@type":"City","name":"Tultitlán"},{"@type":"City","name":"Chalco"}]},"url":"https://www.topografomexico.com.mx/topografo-estado-de-mexico/"},
-  {"@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"¿Cuánto cuesta un topógrafo en Estado de México?","acceptedAnswer":{"@type":"Answer","text":"Solicita cotización gratuita con respuesta normalmente en menos de 24 horas hábiles."}},
-    {"@type":"Question","name":"¿Qué levantamiento necesito para una licencia de construcción en Estado de México?","acceptedAnswer":{"@type":"Answer","text":"Levantamiento planialtimétrico en ITRF2008, DWG y PDF firmado por topógrafo con cédula SEP activa."}}
-  ]}
+  {"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto cuesta un topógrafo en Estado de México?","acceptedAnswer":{"@type":"Answer","text":"Solicita cotización gratuita con respuesta normalmente en menos de 24 horas hábiles. El precio depende de la superficie, orografía y tipo de trabajo."}},{"@type":"Question","name":"¿El topógrafo en Estado de México debe tener cédula SEP?","acceptedAnswer":{"@type":"Answer","text":"Sí. Para que el plano tenga validez ante el catastro de Estado de México, la notaría o el Registro Público de la Propiedad, debe estar firmado por profesionista con cédula SEP activa."}},{"@type":"Question","name":"¿Qué municipios de Estado de México cubren?","acceptedAnswer":{"@type":"Answer","text":"Cubrimos todas las zonas de Estado de México, incluyendo los municipios listados. Envía tu pedido indicando la zona exacta."}},{"@type":"Question","name":"¿Cuánto tarda el levantamiento en Estado de México?","acceptedAnswer":{"@type":"Answer","text":"Para predios urbanos de hasta 1,000 m², el trabajo de campo se completa en media jornada. El plano se entrega en 5 a 8 días hábiles."}},{"@type":"Question","name":"¿Qué ocurre si la medida del predio es distinta a la escritura en un municipio conurbado del Estado de México?","acceptedAnswer":{"@type":"Answer","text":"Es frecuente en municipios conurbados por subdivisiones no registradas. El topógrafo elabora un acta de rectificación de medidas; ese documento debe protocolizarse ante notario y luego actualizarse en catastro municipal para que coincida la escritura con el padrón."}},{"@type":"Question","name":"¿El catastro de Ecatepec acepta levantamientos hechos sin enlace a vértice geodésico del INEGI?","acceptedAnswer":{"@type":"Answer","text":"No se recomienda. El IGECEM exige coordenadas en ITRF2008 enlazadas a puntos de control geodésico certificados. Sin ese enlace el plano puede ser cuestionado ante catastro o notaría, especialmente en trámites de subdivisión y regularización."}}]}
 ]}</script>
 <link href="/styles-topografo.css" rel="stylesheet"/>
 <style>
@@ -100,6 +97,83 @@
 </div>
 </header>
 <script>document.addEventListener('DOMContentLoaded',function(){var nav=document.querySelector('nav.main');if(!nav)return;var btn=document.getElementById('navToggle');if(!btn)return;btn.addEventListener('click',function(){var open=nav.classList.toggle('open');btn.classList.toggle('open',open);btn.setAttribute('aria-expanded',String(open));});document.addEventListener('click',function(e){if(!nav.contains(e.target)&&e.target!==btn&&!btn.contains(e.target)){nav.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');}});nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');});});});</script>
+<style>
+.breadcrumb{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.03em;padding:22px 0 0;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.breadcrumb a:hover{color:var(--brand-deep)}.breadcrumb .sep{color:var(--line-2)}.breadcrumb b{color:var(--ink)}
+.dhero{position:relative;border-bottom:1px solid var(--line);overflow:hidden;background:radial-gradient(800px 360px at 80% -10%,rgba(20,184,190,.1),transparent 60%),linear-gradient(180deg,#fbfdfc,#f3f7f6)}
+.dhero .grid-bg{position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(circle at 75% 30%,#000,transparent 78%);pointer-events:none}
+.dhero-in{position:relative;padding:30px 0 54px;max-width:760px}
+.badge-live{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ok);background:#eaf7f0;border:1px solid #bfe6d2;border-radius:999px;padding:6px 13px;margin-bottom:18px}
+.badge-soon{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:#8a6d1a;background:#fdf7e8;border:1px solid #ecd9a8;border-radius:999px;padding:6px 13px;margin-bottom:18px}
+.coord-tag{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--ink-2);margin-bottom:10px}
+.estado-box{background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:22px 24px}
+.estado-box .k{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.estado-box .p{font-size:14.5px;color:var(--ink-2);line-height:1.65;margin-bottom:16px}
+.badge-live .d{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 rgba(31,157,97,.5);animation:pulse 2s infinite}
+.dhero h1{font-family:var(--serif);font-size:clamp(38px,5vw,60px);font-weight:800;letter-spacing:-.01em;line-height:1.04}
+.dhero h1 em{font-style:normal;color:var(--brand-deep)}
+.dhero p{font-size:18px;color:var(--ink-2);margin-top:16px;max-width:34em}
+.dhero-cta{display:flex;gap:13px;margin-top:26px;flex-wrap:wrap}
+.dhero-meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:30px;padding-top:22px;border-top:1px solid var(--line)}
+.dhero-meta .t b{font-family:var(--disp);font-size:21px;font-weight:600;color:var(--navy)}
+.dhero-meta .t small{display:block;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em;margin-top:2px}
+.layout{display:grid;grid-template-columns:1fr 360px;gap:46px;align-items:start;padding:60px 0 0}
+.col-main > section{margin-bottom:48px}
+.col-main h2{font-family:var(--serif);font-size:28px;font-weight:700;margin-bottom:6px}
+.col-main .lede{font-size:15.5px;color:var(--ink-2);margin-bottom:22px;max-width:64ch}
+.op{background:var(--panel);border:1px solid var(--line-2);border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -42px rgba(13,27,46,.4)}
+.op-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 20px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#fff,#f6faf9);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.op-top .live{display:inline-flex;align-items:center;gap:7px;color:var(--brand-deep)}
+.op-top .live .d{width:7px;height:7px;border-radius:50%;background:var(--ok)}
+.op-head{display:flex;align-items:center;gap:18px;padding:24px 22px 18px}
+.op-avatar{width:66px;height:66px;border-radius:12px;background:linear-gradient(160deg,var(--navy),var(--brand-deep));color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-size:24px;font-weight:600;flex:0 0 auto;letter-spacing:-.02em}
+.op-id h3{font-family:var(--serif);font-size:23px;font-weight:700;line-height:1.1}
+.op-id .role{font-size:14px;color:var(--ink-2);margin-top:2px}
+.op-id .cred{font-family:var(--mono);font-size:11.5px;color:var(--brand-deep);margin-top:7px;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-2);border-radius:5px;padding:3px 9px}
+.op-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.op-stats .cell{background:var(--panel-2);padding:14px 16px;text-align:center}
+.op-stats .k{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.op-stats .v{font-family:var(--disp);font-size:16px;font-weight:600;color:var(--navy);margin-top:4px}
+.op-body{padding:20px 22px}
+.op-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.op-tag{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);background:rgba(13,148,136,.06);border:1px solid var(--line);border-radius:6px;padding:5px 10px}
+.op-bio{font-size:14px;color:var(--ink-2);line-height:1.65}
+.op-contact{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.op-contact a{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;font-weight:500;padding:11px 16px;border-radius:8px;transition:.15s}
+.op-contact .tel{background:var(--brand);color:#fff}.op-contact .tel:hover{background:var(--brand-deep)}
+.op-contact .mail{background:#fff;border:1px solid var(--line-2);color:var(--ink)}.op-contact .mail:hover{border-color:var(--brand);color:var(--brand-deep)}
+.conc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.conc{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 13px;font-size:13.5px;font-weight:500}
+.conc::before{content:"✓";color:var(--ok);font-weight:700;font-size:12px}
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.work{background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--brand);border-radius:0 10px 10px 0;padding:18px 20px}
+.work h4{font-family:var(--disp);font-size:15px;font-weight:600;margin-bottom:6px}
+.work p{font-size:13.5px;color:var(--ink-2);line-height:1.6}
+.check{list-style:none;padding-left:0;display:flex;flex-direction:column;gap:9px}
+.check li{display:flex;gap:11px;align-items:flex-start;color:var(--ink-2);line-height:1.65}
+.check li::before{content:"✓";color:var(--ok);font-weight:700;flex:0 0 auto}
+.faq{display:flex;flex-direction:column;gap:10px}
+.faq .q{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:0}
+.faq summary{list-style:none;cursor:pointer;padding:15px 18px;font-weight:600;font-size:15px;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}.faq .pm{color:var(--brand-deep);font-weight:700}
+.faq .a{padding:0 18px 16px;font-size:14px;color:var(--ink-2);line-height:1.65}
+.sidebar{position:sticky;top:84px;display:flex;flex-direction:column;gap:18px}
+.side-form{background:var(--panel);border:1px solid var(--line-2);border-radius:14px;padding:24px;box-shadow:0 30px 60px -42px rgba(13,27,46,.35)}
+.side-form h3{font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:4px}
+.side-form .sub{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-bottom:18px}
+.side-form .field{margin-bottom:13px}.side-form label{display:block;font-size:12.5px;font-weight:600;margin-bottom:5px}
+.side-form input,.side-form select,.side-form textarea{width:100%;border:1px solid var(--line-2);border-radius:8px;padding:10px 12px;font:inherit;font-size:14px;background:#fff}
+.side-info{background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:20px}
+.side-info h4{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-bottom:14px}
+.irow{display:flex;gap:11px;align-items:flex-start;padding:9px 0;border-bottom:1px dashed var(--line);font-size:13px;color:var(--ink-2)}
+.irow:last-child{border-bottom:0}.irow svg{flex:0 0 auto;margin-top:1px;color:var(--brand-deep)}.irow b{color:var(--ink);font-weight:600}
+.ctaband{background:linear-gradient(160deg,var(--navy),#0b3b3a);color:#fff;text-align:center;padding:56px 0;margin-top:60px}
+.ctaband h2{font-family:var(--serif);font-size:30px;font-weight:800;margin-bottom:10px}
+.ctaband p{color:rgba(255,255,255,.8);margin-bottom:22px}
+@media(max-width:980px){.layout{grid-template-columns:1fr;gap:36px}.sidebar{position:static}.work-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.conc-grid{grid-template-columns:1fr 1fr}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(31,157,97,.45)}70%{box-shadow:0 0 0 7px rgba(31,157,97,0)}100%{box-shadow:0 0 0 0 rgba(31,157,97,0)}}
+</style>
 <main>
 <div class="wrap">
 <div class="breadcrumb"><a href="/">Inicio</a><span class="sep">/</span><a href="/#estados">Estados</a><span class="sep">/</span><b>Estado de México</b></div>
@@ -107,72 +181,44 @@
 <section class="dhero">
 <div class="grid-bg"></div>
 <div class="wrap"><div class="dhero-in">
-<span class="coord-tag" style="font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--muted)">LAT 19.2966 · LON -99.6540 · ITRF2008</span>
-<span class="badge-soon" style="margin-top:10px">Cobertura en expansión · pedido anticipado</span>
+<span class="coord-tag">LAT 19.2966 · LON -99.6540 · ITRF2008</span>
+<span class="badge-soon">Cobertura en expansión · pedido anticipado</span>
 <h1>Topógrafo <em>en Estado de México</em></h1>
 <p>El Estado de México rodea la CDMX y forma parte de la zona metropolitana más grande del país. Alta densidad de obra habitacional, industrial y regularizaciones catastrales en municipios conurbados.</p>
 <div class="dhero-cta">
 <a class="btn btn-primary btn-lg" href="#contacto">Solicitar Cotización Gratuita →</a>
-<a class="btn btn-ghost btn-lg" href="/levantamiento-topografico/">Ver Servicios</a>
+<a class="btn btn-ghost btn-lg" href="/#estados">Ver Servicios</a>
 </div>
-<div class="dhero-meta">
-<div class="t"><b>14</b><small>MUNICIPIOS CUBIERTOS</small></div>
-<div class="t"><b>24h</b><small>RESPUESTA</small></div>
-<div class="t"><b>ITRF2008</b><small>SISTEMA MX</small></div>
-</div>
+<div class="dhero-meta"><div class="t"><b>14</b><small>MUNICIPIOS CUBIERTOS</small></div><div class="t"><b>24h</b><small>RESPUESTA</small></div><div class="t"><b>ITRF2008</b><small>SISTEMA MX</small></div></div>
 </div></div>
 </section>
 <div class="wrap">
 <div class="layout">
 <div class="col-main">
 <section>
-<div style="background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-top:8px">
-<p style="font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Estado del servicio</p>
-<p style="font-size:14.5px;color:var(--ink-2);line-height:1.65;margin-bottom:16px">Estamos seleccionando el topógrafo con cédula SEP para Estado de México. Puedes enviar tu pedido igualmente; te contactaremos en cuanto tengamos profesionista asignado en tu zona.</p>
+<div class="estado-box">
+<p class="k">Estado del servicio</p>
+<p class="p">Estamos seleccionando el topógrafo con cédula SEP para Estado de México. Puedes enviar tu pedido igualmente; te contactaremos en cuanto tengamos profesionista asignado en tu zona.</p>
 <a class="btn btn-primary" href="#contacto" style="display:inline-flex">Enviar pedido anticipado →</a>
 </div>
 </section>
 <section>
 <h2>Municipios cubiertos en Estado de México</h2>
 <p class="lede">Cobertura activa en los principales municipios de Estado de México (MEX).</p>
-<div class="conc-grid"><span class="conc">Ecatepec</span>
-<span class="conc">Naucalpan</span>
-<span class="conc">Tlalnepantla</span>
-<span class="conc">Nezahualcóyotl</span>
-<span class="conc">Toluca</span>
-<span class="conc">Chimalhuacán</span>
-<span class="conc">Tultitlán</span>
-<span class="conc">Chalco</span>
-<span class="conc">Atizapán de Zaragoza</span>
-<span class="conc">Cuautitlán Izcalli</span>
-<span class="conc">Huixquilucan</span>
-<span class="conc">Tecámac</span>
-<span class="conc">La Paz</span>
-<span class="conc">Valle de Chalco</span></div>
+<div class="conc-grid"><span class="conc">Ecatepec</span><span class="conc">Naucalpan</span><span class="conc">Tlalnepantla</span><span class="conc">Nezahualcóyotl</span><span class="conc">Toluca</span><span class="conc">Chimalhuacán</span><span class="conc">Tultitlán</span><span class="conc">Chalco</span><span class="conc">Atizapán de Zaragoza</span><span class="conc">Cuautitlán Izcalli</span><span class="conc">Huixquilucan</span><span class="conc">Tecámac</span><span class="conc">La Paz</span><span class="conc">Valle de Chalco</span></div>
 </section>
 <section>
 <h2>Trabajos más frecuentes en Estado de México</h2>
-<div class="work-grid">
-<div class="work"><h4>Levantamiento en zona conurbada</h4><p>Levantamiento planialtimétrico en ITRF2008/UTM para proyectos de construcción, licencias municipales y trámites ante el catastro de Estado de México. Entregables en DWG y PDF.</p></div>
-<div class="work"><h4>Regularización catastral en municipios</h4><p>Levantamiento con poligonal georreferenciada en ITRF2008. Firma por topógrafo con cédula SEP activa; entregable en DWG y PDF, válido ante notaría y Registro Público en Estado de México.</p></div>
-<div class="work"><h4>Subdivisión de lotes en Ecatepec</h4><p>Proyecto técnico con memoria descriptiva, cuadro de construcción y superficie total. Compatible con los formatos exigidos por el catastro municipal y el Registro Público de la Propiedad en Estado de México.</p></div>
-<div class="work"><h4>Topografía industrial en Toluca</h4><p>Marcado en campo de ejes y niveles conforme al proyecto arquitectónico. Acta de trazo firmada por topógrafo habilitado, requerida por la dirección de obra en Estado de México.</p></div>
-</div>
+<div class="work-grid"><div class="work"><h4>Levantamiento en zona conurbada</h4><p>Levantamiento planialtimétrico en ITRF2008/UTM para proyectos de construcción, licencias municipales y trámites ante el catastro de Estado de México. Entregables en DWG y PDF.</p></div><div class="work"><h4>Regularización catastral en municipios</h4><p>Levantamiento con poligonal georreferenciada en ITRF2008. Firma por topógrafo con cédula SEP activa; entregable en DWG y PDF, válido ante notaría y Registro Público en Estado de México.</p></div><div class="work"><h4>Subdivisión de lotes en Ecatepec</h4><p>Proyecto técnico con memoria descriptiva, cuadro de construcción y superficie total. Compatible con los formatos exigidos por el catastro municipal y el Registro Público de la Propiedad en Estado de México.</p></div><div class="work"><h4>Topografía industrial en Toluca</h4><p>Marcado en campo de ejes y niveles conforme al proyecto arquitectónico. Acta de trazo firmada por topógrafo habilitado, requerida por la dirección de obra en Estado de México.</p></div></div>
 </section>
 <section>
 <h2>Contexto territorial en Estado de México</h2>
-<p class="lede" style="max-width:72ch">El Estado de México rodea la cuenca de México con altitudes de entre 2,200 m en los municipios conurbados y 4,680 m en el Nevado de Toluca (Xinantécatl). La alta densidad urbana de Ecatepec, Nezahualcóyotl y Chimalhuacán genera frecuentes discrepancias entre superficie catastral y linderos reales, producto de subdivisiones informales históricas. El IGECEM (Instituto de Información e Investigación Geográfica, Estadística y Catastral del Estado de México) rige el catastro estatal bajo el sistema ITRF2008.</p>
+<p class="lede">El Estado de México rodea la cuenca de México con altitudes de entre 2,200 m en los municipios conurbados y 4,680 m en el Nevado de Toluca (Xinantécatl). La alta densidad urbana de Ecatepec, Nezahualcóyotl y Chimalhuacán genera frecuentes discrepancias entre superficie catastral y linderos reales, producto de subdivisiones informales históricas. El IGECEM (Instituto de Información e Investigación Geográfica, Estadística y Catastral del Estado de México) rige el catastro estatal bajo el sistema ITRF2008.</p>
 </section>
+
 <section>
 <h2>Preguntas frecuentes en Estado de México</h2>
-<div class="faq">
-<details class="q" open=""><summary>¿Cuánto cuesta un topógrafo en Estado de México?<span class="pm">+</span></summary><div class="a">Solicita cotización gratuita con respuesta normalmente en menos de 24 horas hábiles. El precio depende de la superficie, orografía y tipo de trabajo.</div></details>
-<details class="q"><summary>¿El topógrafo en Estado de México debe tener cédula SEP?<span class="pm">+</span></summary><div class="a">Sí. Para que el plano tenga validez ante el catastro de Estado de México, la notaría o el Registro Público de la Propiedad, debe estar firmado por profesionista con cédula SEP activa.</div></details>
-<details class="q"><summary>¿Qué municipios de Estado de México cubren?<span class="pm">+</span></summary><div class="a">Cubrimos todas las zonas de Estado de México, incluyendo los municipios listados. Envía tu pedido indicando la zona exacta.</div></details>
-<details class="q"><summary>¿Cuánto tarda el levantamiento en Estado de México?<span class="pm">+</span></summary><div class="a">Para predios urbanos de hasta 1,000 m², el trabajo de campo se completa en media jornada. El plano se entrega en 5 a 8 días hábiles.</div></details>
-<details class="q"><summary>¿Qué ocurre si la medida del predio es distinta a la escritura en un municipio conurbado del Estado de México?<span class="pm">+</span></summary><div class="a">Es frecuente en municipios conurbados por subdivisiones no registradas. El topógrafo elabora un acta de rectificación de medidas; ese documento debe protocolizarse ante notario y luego actualizarse en catastro municipal para que coincida la escritura con el padrón.</div></details>
-<details class="q"><summary>¿El catastro de Ecatepec acepta levantamientos hechos sin enlace a vértice geodésico del INEGI?<span class="pm">+</span></summary><div class="a">No se recomienda. El IGECEM exige coordenadas en ITRF2008 enlazadas a puntos de control geodésico certificados. Sin ese enlace el plano puede ser cuestionado ante catastro o notaría, especialmente en trámites de subdivisión y regularización.</div></details>
-</div>
+<div class="faq"><details class="q" open><summary>¿Cuánto cuesta un topógrafo en Estado de México?<span class="pm">+</span></summary><div class="a">Solicita cotización gratuita con respuesta normalmente en menos de 24 horas hábiles. El precio depende de la superficie, orografía y tipo de trabajo.</div></details><details class="q"><summary>¿El topógrafo en Estado de México debe tener cédula SEP?<span class="pm">+</span></summary><div class="a">Sí. Para que el plano tenga validez ante el catastro de Estado de México, la notaría o el Registro Público de la Propiedad, debe estar firmado por profesionista con cédula SEP activa.</div></details><details class="q"><summary>¿Qué municipios de Estado de México cubren?<span class="pm">+</span></summary><div class="a">Cubrimos todas las zonas de Estado de México, incluyendo los municipios listados. Envía tu pedido indicando la zona exacta.</div></details><details class="q"><summary>¿Cuánto tarda el levantamiento en Estado de México?<span class="pm">+</span></summary><div class="a">Para predios urbanos de hasta 1,000 m², el trabajo de campo se completa en media jornada. El plano se entrega en 5 a 8 días hábiles.</div></details><details class="q"><summary>¿Qué ocurre si la medida del predio es distinta a la escritura en un municipio conurbado del Estado de México?<span class="pm">+</span></summary><div class="a">Es frecuente en municipios conurbados por subdivisiones no registradas. El topógrafo elabora un acta de rectificación de medidas; ese documento debe protocolizarse ante notario y luego actualizarse en catastro municipal para que coincida la escritura con el padrón.</div></details><details class="q"><summary>¿El catastro de Ecatepec acepta levantamientos hechos sin enlace a vértice geodésico del INEGI?<span class="pm">+</span></summary><div class="a">No se recomienda. El IGECEM exige coordenadas en ITRF2008 enlazadas a puntos de control geodésico certificados. Sin ese enlace el plano puede ser cuestionado ante catastro o notaría, especialmente en trámites de subdivisión y regularización.</div></details></div>
 </section>
 </div>
 <aside class="sidebar" id="contacto">
@@ -190,20 +236,11 @@
 </form>
 <div class="side-info">
 <h4>Qué está incluido</h4>
-<div class="irow"><svg fill="none" height="15" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="15"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path><path d="M14 2v6h6"></path></svg><div><b>Plano DWG + PDF</b> firmado con cédula SEP</div></div>
-<div class="irow"><svg fill="none" height="15" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="15"><path d="M3 18l6-6 4 4 8-8"></path></svg><div><b>ITRF2008</b>, sistema oficial INEGI</div></div>
-<div class="irow"><svg fill="none" height="15" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="15"><path d="M12 2l8 3v6c0 5-3.4 8.5-8 11-4.6-2.5-8-6-8-11V5l8-3z"></path></svg><div><b>Cédula SEP activa</b> válida para catastro y notario</div></div>
-<div class="irow"><svg fill="none" height="15" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="15"><path d="M3 12h18M3 6h18M3 18h18"></path></svg><div><b>Escalas</b> 1:200 o 1:500</div></div>
+<div class="irow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg><div><b>Plano DWG + PDF</b> firmado con cédula SEP</div></div><div class="irow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18l6-6 4 4 8-8"/></svg><div><b>ITRF2008</b>, sistema oficial INEGI</div></div><div class="irow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 3v6c0 5-3.4 8.5-8 11-4.6-2.5-8-6-8-11V5l8-3z"/></svg><div><b>Cédula SEP activa</b> válida para catastro y notario</div></div><div class="irow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg><div><b>Escalas</b> 1:200 o 1:500</div></div>
 </div>
 <div class="side-info">
 <h4>Otros estados</h4>
-<div class="side-links">
-<a href="/topografo-ciudad-de-mexico/">Topógrafo Ciudad de México <span class="ok">En breve</span></a>
-<a href="/topografo-jalisco/">Topógrafo Jalisco <span class="ok">En breve</span></a>
-<a href="/topografo-nuevo-leon/">Topógrafo Nuevo León <span class="ok">En breve</span></a>
-<a href="/topografo-puebla/">Topógrafo Puebla <span class="ok">En breve</span></a>
-<a href="/#estados">Ver todos los estados →</a>
-</div>
+<div class="side-links"><a href="/topografo-ciudad-de-mexico/">Topógrafo Ciudad de México<span class="ok">En breve</span></a><a href="/topografo-jalisco/">Topógrafo Jalisco<span class="ok">En breve</span></a><a href="/topografo-nuevo-leon/">Topógrafo Nuevo León<span class="ok">En breve</span></a><a href="/topografo-puebla/">Topógrafo Puebla<span class="ok">En breve</span></a><a href="/#estados">Ver todos los estados →</a></div>
 </div>
 </aside>
 </div>
@@ -216,6 +253,7 @@
 </div>
 </section>
 </main>
+
 <footer>
 <div class="wrap">
 <div class="fg">
