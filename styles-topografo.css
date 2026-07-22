@@ -438,7 +438,17 @@
 
   /* districts */
   .dist-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-  .dist{display:flex;align-items:center;justify-content:space-between;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:13px 15px;font-family:var(--disp);font-weight:500;font-size:14px;transition:.15s}
+  
+/* Card de região: o link deixa de envolver o selo (2026-07-22, R-38).
+   O selo estava DENTRO do <a>, portanto o Google lia o anchor como
+   "Aveiro Disponível" — nos 9 sites, sem excepção. Metade do anchor do link
+   mais importante que cada página de região recebe (o da homepage) ia numa
+   palavra sem valor de pesquisa.
+   Tirar o selo de dentro do <a> encolheria a área clicável, o que custa
+   conversão em telemóvel. Por isso o link fica só com o nome e estica-se por
+   cima do card inteiro com um ::after. Verificado no browser: 6 pontos do
+   card, incluindo POR CIMA do selo, abrem o link; aspecto idêntico. */
+.dist{position:relative}.dist-link{color:inherit;text-decoration:none}.dist-link::after{content:'';position:absolute;inset:0}.dist{display:flex;align-items:center;justify-content:space-between;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:13px 15px;font-family:var(--disp);font-weight:500;font-size:14px;transition:.15s}
   .dist:hover{border-color:var(--brand);box-shadow:0 8px 18px -14px rgba(13,148,136,.5)}
   .st2{font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;display:inline-flex;align-items:center;gap:5px}
   .st2.ok{color:var(--ok)} .st2.soon{color:var(--muted)}
