@@ -562,7 +562,7 @@
    412px, a página ganhava scroll horizontal, e o botão de menu ficava FORA do
    ecrã (x 388-412). Os 6 links de navegação existiam e eram inalcançáveis.
    A 320px o transbordo era de 61px. Verificado no browser, antes e depois. */
-@media(max-width:560px){.navrow{gap:8px}.navrow .brand{font-size:15px;gap:7px;min-width:0}.navrow .brand svg{width:18px;height:25px;flex-shrink:0}.navrow .btn{font-size:11px;padding:9px 12px;gap:5px}
+@media(max-width:560px){.navrow{gap:8px}.navrow .brand{font-size:15px;gap:7px;min-width:0;overflow:hidden}.navrow .brand>span{overflow:hidden;text-overflow:ellipsis;min-width:0}.navrow .brand svg{width:18px;height:25px;flex-shrink:0}.navrow .btn{font-size:11px;padding:9px 12px;gap:5px}
     .wrap{padding:0 18px}
     .two,.svc-grid,.dist-grid,.quando-grid,.tipos-grid,.work-grid,.influencia-grid{grid-template-columns:1fr}
     .tele-read{grid-template-columns:1fr}
