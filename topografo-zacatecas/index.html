@@ -136,6 +136,22 @@
 @media(max-width:980px){.layout{grid-template-columns:1fr;gap:36px}.sidebar{position:static}.work-grid{grid-template-columns:1fr}}
 @media(max-width:560px){.conc-grid{grid-template-columns:1fr 1fr}}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(31,157,97,.45)}70%{box-shadow:0 0 0 7px rgba(31,157,97,0)}100%{box-shadow:0 0 0 0 rgba(31,157,97,0)}}
+.soon-card{background:var(--panel);border:1px solid #ecd9a8;border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -42px rgba(13,27,46,.4)}
+/* card 'sem parceiro' rico — vinha do <style> inline do PT (2026-07-24) */
+.soon-top{display:flex;align-items:center;gap:13px;padding:18px 22px;border-bottom:1px solid var(--line);background:#fdf9ee}
+.soon-top .ic{width:42px;height:42px;border-radius:11px;background:#fbf0d4;color:var(--amber);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.soon-top h3{font-family:var(--serif);font-size:21px;font-weight:700}
+.soon-top p{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.03em;margin-top:2px;text-transform:uppercase}
+.soon-body{padding:22px}
+.soon-body p.t{font-size:14.5px;color:var(--ink-2);line-height:1.7;margin-bottom:14px}
+.soon-list{list-style:none;display:flex;flex-direction:column;gap:11px}
+.soon-list li{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-2)}
+.soon-list li svg{flex:0 0 auto;margin-top:2px;color:var(--brand-deep)}
+.soon-form{background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:20px}
+.soon-form h4{font-family:var(--disp);font-size:15px;font-weight:600;margin-bottom:3px}
+.soon-form .sub{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:14px}
+.soon-form .field{margin-bottom:12px}
+@media(max-width:760px){.soon-body{grid-template-columns:1fr}}
 </style>
 <main>
 <div class="wrap">
@@ -159,10 +175,19 @@
 <div class="layout">
 <div class="col-main">
 <section>
-<div class="estado-box">
-<p class="k">Estado del servicio</p>
-<p class="p">Estamos seleccionando el topógrafo con cédula SEP para Zacatecas. Puedes enviar tu pedido igualmente; te contactaremos en cuanto tengamos profesionista asignado en tu zona.</p>
-<a class="btn btn-primary" href="#contacto" style="display:inline-flex">Enviar pedido anticipado →</a>
+<div class="soon-card">
+<div class="soon-top">
+<span class="ic"><svg fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+<div><h3>Todavía sin topógrafo asignado en Zacatecas</h3><p>// asignación: en proceso</p></div>
+</div>
+<div class="soon-body">
+<div>
+<p class="t">La zona de Zacatecas está en proceso de asignación. Las solicitudes que llegan aquí se canalizan al topógrafo con cédula profesional SEP disponible más cercano.</p>
+<ul class="soon-list">
+<li><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M4 4h16v16H4z"></path><path d="M4 6l8 6 8-6"></path></svg>Envía tu solicitud de todos modos: te respondemos en menos de 24 horas</li><li><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M12 7v5l3 2"></path><circle cx="12" cy="12" r="9"></circle></svg>Atendemos de inmediato las solicitudes urgentes</li><li><svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M12 2l8 3v6c0 5-3.4 8.5-8 11-4.6-2.5-8-6-8-11V5l8-3z"></path></svg>¿Eres topógrafo con cédula profesional SEP? Postúlate para ser el topógrafo de referencia de tu estado</li>
+</ul>
+</div>
+</div>
 </div>
 </section>
 <section>
