@@ -192,19 +192,14 @@
 <li><svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20"><path d="M20 6L9 17l-5-5"></path></svg>Planos en DWG + PDF, ITRF2008</li>
 </ul>
 </div>
-<form action="/gracias/" class="form-card" data-netlify="true" data-netlify-honeypot="bot-field" method="POST" name="pedido-presupuesto">
+<form class="form-card" name="pedido-presupuesto" data-netlify="true" data-netlify-honeypot="bot-field" action="/gracias/" method="POST">
 <input name="form-name" type="hidden" value="pedido-presupuesto"/>
 <input name="bot-field" type="hidden" />
 <h3>Los datos del predio</h3>
-<p class="sub">// respuesta &lt; 24h hábiles · sin compromiso</p>
-<div class="two">
-<div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" placeholder="Tu nombre" required type="text"/></div>
-<div class="field"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" placeholder="55 1234 5678" type="tel"/></div>
-</div>
-<div class="field"><label for="email">Email</label><input id="email" name="email" placeholder="email@ejemplo.com.mx" required type="email"/></div>
-<div class="two">
-<div class="field"><label for="estado">Estado</label><select id="estado" name="estado" required>
-<option value="">Selecciona</option>
+<p class="sub">// respuesta &lt; 24h · sin compromiso</p>
+<div class="two"><div class="field"><label>Nombre</label><input name="nome" type="text" placeholder="Tu nombre" required/></div><div class="field"><label>Teléfono</label><input name="telefone" type="tel" placeholder="55 1234 5678" required/></div></div>
+<div class="field"><label>Email</label><input name="email" type="email" placeholder="email@ejemplo.com.mx" required/></div>
+<div class="two"><div class="field"><label>Estado</label><select name="estado" required><option value="">Selecciona</option>
 <optgroup label="Norte">
 <option>Nuevo León</option>
 <option>Chihuahua</option>
@@ -246,12 +241,9 @@
 <option>Yucatán</option>
 <option>Quintana Roo</option>
 <option>Campeche</option>
-</optgroup>
-</select></div>
-<div class="field"><label for="tipo">Tipo</label><select id="tipo" name="tipo" required><option value="">¿Qué necesitas?</option><option value="Levantamiento topográfico">Levantamiento topográfico</option><option value="Deslinde de predios">Deslinde de predios</option><option value="Subdivisión de lotes">Subdivisión de lotes</option><option value="Trazo y nivelación">Trazo y nivelación</option><option value="Topografía con dron">Topografía con dron</option><option value="No sé">No sé</option><option value="Otros">Otros</option></select></div>
-</div>
-<div class="field"><label for="descripcion">Superficie y finalidad</label><textarea id="descripcion" name="descripcion" placeholder="Ej.: predio de 500 m² para licencia de construcción..." rows="3"></textarea></div>
-<button class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Enviar Solicitud →</button>
+</optgroup></select></div><div class="field"><label>Tipo de trabajo</label><select name="tipo" required><option value="">¿Qué necesitas?</option><option value="Levantamiento topográfico">Levantamiento topográfico</option><option value="Deslinde de predios">Deslinde de predios</option><option value="Subdivisión de lotes">Subdivisión de lotes</option><option value="Trazo y nivelación">Trazo y nivelación</option><option value="Topografía con dron">Topografía con dron</option><option value="No sé">No sé</option><option value="Otros">Otros</option></select></div></div>
+<div class="field"><label>Superficie y finalidad</label><textarea name="descripcion" placeholder="Superficie aproximada y finalidad..." rows="3"></textarea></div>
+<button class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Enviar solicitud →</button>
 </form>
 </div>
 </div>
