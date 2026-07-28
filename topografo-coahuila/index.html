@@ -185,9 +185,8 @@
 <p class="svc-recruit">¿Eres topógrafo con cédula profesional SEP? Postúlate para ser el topógrafo de referencia de tu estado</p>
 </section>
 <section>
-<h2>Municipios cubiertos en Coahuila</h2>
-<p class="lede">Cobertura activa en los principales municipios de Coahuila (COAH).</p>
-<div class="conc-grid"><span class="conc">Saltillo</span><span class="conc">Torreón</span><span class="conc">Monclova</span><span class="conc">Piedras Negras</span><span class="conc">Acuña</span><span class="conc">Ramos Arizpe</span><span class="conc">San Pedro</span><span class="conc">Frontera</span><span class="conc">Sabinas</span><span class="conc">San Juan de Sabinas</span><span class="conc">Castaños</span><span class="conc">Parras</span><span class="conc">Allende</span><span class="conc">Nava</span></div>
+<h2>Elige tu ciudad en Coahuila</h2>
+<div class="dist-grid"><div class="dist"><a class="dist-link" href="/topografo-saltillo/">Saltillo</a><span class="st2 ver">Ver →</span></div><div class="dist"><a class="dist-link" href="/topografo-torreon/">Torreón</a><span class="st2 ver">Ver →</span></div></div>
 </section>
 <section>
 <h2>Trabajos más frecuentes en Coahuila</h2>
@@ -207,13 +206,13 @@
 <aside class="sidebar" id="contacto">
 <form class="side-form" name="pedido-coahuila" data-netlify="true" data-netlify-honeypot="bot-field" action="/gracias/" method="POST">
 <input name="form-name" type="hidden" value="pedido-coahuila"/>
-<input name="bot-field" type="hidden" /><input name="estado" type="hidden" value="Coahuila"/>
+<input name="bot-field" type="hidden" />
 <h3>Solicitar cotización</h3>
-<p class="sub">// estado: Coahuila · respuesta &lt; 24h</p>
+<p class="sub">// respuesta &lt; 24h · sin compromiso</p>
 <div class="field"><label>Nombre</label><input name="nome" type="text" placeholder="Tu nombre" required/></div>
 <div class="field"><label>Teléfono</label><input name="telefone" type="tel" placeholder="55 1234 5678" required/></div>
 <div class="field"><label>Email</label><input name="email" type="email" placeholder="email@ejemplo.com.mx" required/></div>
-<div class="field"><label>Tipo de trabajo</label><select name="tipo" required><option value="">¿Qué necesitas?</option><option value="Levantamiento topográfico">Levantamiento topográfico</option><option value="Deslinde de predios">Deslinde de predios</option><option value="Subdivisión de lotes">Subdivisión de lotes</option><option value="Trazo y nivelación">Trazo y nivelación</option><option value="Topografía con dron">Topografía con dron</option><option value="No sé">No sé</option><option value="Otros">Otros</option></select></div>
+<div class="field"><label>Estado</label><input name="estado" type="text" value="Coahuila" readonly class="locked" tabindex="-1"/></div><div class="field"><label>Ciudad</label><select name="ciudad" required><option value="">—</option><option>Saltillo</option><option>Torreón</option></select></div>
 <div class="field"><label>Superficie y finalidad</label><textarea name="descripcion" placeholder="Superficie aproximada y finalidad..." rows="3"></textarea></div>
 <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Enviar solicitud →</button>
 </form>
