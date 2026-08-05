@@ -777,5 +777,4 @@
 .side-links a:hover{color:var(--brand-deep)}
 .side-links a:last-child{border-bottom:0}
 .side-links span{font-family:var(--mono);color:var(--brand-deep)}
-.two,.svc-grid{grid-template-columns:1fr}
 nav.main a:last-child{border-bottom:0}
