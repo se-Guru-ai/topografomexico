@@ -195,7 +195,7 @@
 <div class="op-body">
 <div class="op-tags"><span class="op-tag">Levantamiento</span><span class="op-tag">Deslinde</span><span class="op-tag">Subdivisión</span><span class="op-tag">Trazo</span><span class="op-tag">Nivelación</span><span class="op-tag">Georreferenciación</span></div>
 <p class="op-bio">Topógrafo con cédula SEP y cobertura en Hermosillo.</p>
-<div class="op-contact"><a class="tel" href="tel:662 112 4468"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.5-1.2a2 2 0 012.1-.4c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"></path></svg>662 112 4468</a><a class="mail" href="mailto:chavezdavid@hotmail.com"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"></path><path d="M4 6l8 6 8-6"></path></svg>Email</a></div>
+<div class="op-contact"><a class="tel" href="#contacto"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>Pedir cotización</a></div>
 </div>
 </div>
 </section>
@@ -274,34 +274,5 @@
 </footer>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P8H7CSNNMR"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P8H7CSNNMR');</script>
-<script>
-(function(){
-  var seg = location.pathname.replace(/\/(index\.html)?$/,'').replace(/\.html$/,'');
-  seg = seg.substring(seg.lastIndexOf('/')+1);
-  var d = seg.replace(/^(topografo|geodetic-engineer|geodeta|harita-muhendisi|harita)-/,'');
-  document.querySelectorAll('.op-contact a').forEach(function(a){
-    var h = a.getAttribute('href') || '';
-    if (!h.startsWith('tel:') && !h.startsWith('mailto:')) return;
-    var isTel = h.startsWith('tel:');
-    var savedHref = h;
-    var revealText = isTel ? h.replace('tel:','') : h.replace('mailto:','');
-    var label = isTel ? 'Ver teléfono' : 'Ver email';
-    a.removeAttribute('href');
-    for (var nodes = a.childNodes, i = nodes.length - 1; i >= 0; i--) {
-      if (nodes[i].nodeType === 3) { nodes[i].textContent = label; break; }
-    }
-    a.style.cursor = 'pointer';
-    a.addEventListener('click', function() {
-      if (typeof gtag !== 'undefined')
-        gtag('event', isTel ? 'phone_reveal' : 'email_reveal', {district: d});
-      a.setAttribute('href', savedHref);
-      for (var nodes = a.childNodes, i = nodes.length - 1; i >= 0; i--) {
-        if (nodes[i].nodeType === 3) { nodes[i].textContent = revealText; break; }
-      }
-      setTimeout(function(){ window.location.href = savedHref; }, 80);
-    }, {once: true});
-  });
-})();
-</script>
 </body>
 </html>
