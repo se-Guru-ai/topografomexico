@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Solicitud Recibida | Topógrafo México</title>
-<meta content="Tu pedido ha sido recibido. El topógrafo de tu estado te contactará en menos de 24 horas." name="description"/>
-<link href="https://www.topografomexico.com.mx/gracias/" rel="canonical"/>
-<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
-<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="/favicon.ico" rel="apple-touch-icon"/>
-<meta content="Solicitud Recibida | Topógrafo México" property="og:title"/>
-<meta content="Tu pedido ha sido recibido. El topógrafo de tu estado te contactará en menos de 24 horas." property="og:description"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consigue clientes de topografía en tu zona</title>
+<meta name="description" content="Recibimos solicitudes de clientes de topografía en todo México. Buscamos un topógrafo por zona para atenderlas.">
+<link rel="canonical" href="https://www.topografomexico.com.mx/para-topografos/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.ico">
+<meta name="robots" content="index, follow">
+<meta content="Consigue clientes de topografía en tu zona" property="og:title"/>
+<meta content="Recibimos solicitudes de clientes de topografía en todo México. Buscamos un topógrafo por zona para atenderlas." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.topografomexico.com.mx/para-topografos/" property="og:url"/>
 <meta content="https://www.topografomexico.com.mx/og.jpg" property="og:image"/>
-<meta content="Topógrafo en México" property="og:image:alt"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta name="google-site-verification" content="tb4h0oadWOqrorkcKPTAUMiRY7oZLYVKdjovfE41txk"/>
-<meta content="website" property="og:type"/>
-<meta content="es_MX" property="og:locale"/>
-<meta content="https://www.topografomexico.com.mx/gracias/" property="og:url"/>
-<meta content="Topógrafo México" property="og:site_name"/>
-<link href="/styles-topografo.css" rel="stylesheet"/>
-<meta name="robots" content="noindex,nofollow"/>
+<link rel="stylesheet" href="/styles-topografo.css">
 </head>
 <body>
 <header>
@@ -44,14 +40,31 @@
 </div>
 </header>
 <script>document.addEventListener('DOMContentLoaded',function(){var nav=document.querySelector('nav.main');if(!nav)return;var btn=document.getElementById('navToggle');if(!btn)return;btn.addEventListener('click',function(){var open=nav.classList.toggle('open');btn.classList.toggle('open',open);btn.setAttribute('aria-expanded',String(open));});document.addEventListener('click',function(e){if(!nav.contains(e.target)&&e.target!==btn&&!btn.contains(e.target)){nav.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');}});nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');});});});</script>
-<main style="min-height:60vh;display:flex;align-items:center">
-<div class="wrap" style="text-align:center;padding:80px 0">
-<svg width="64" height="64" fill="none" stroke="#0d9488" stroke-width="2" viewBox="0 0 24 24" style="margin:0 auto 24px"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-<h1 style="font-family:var(--serif);font-size:clamp(32px,5vw,52px);font-weight:800;margin-bottom:16px">¡Solicitud recibida!</h1>
-<p style="font-size:19px;color:var(--ink-2);max-width:34em;margin:0 auto 32px;line-height:1.6">El topógrafo con cédula SEP de tu estado revisará tu solicitud y te contactará en <strong>menos de 24 horas</strong> con fecha y precio final.</p>
-<a class="btn btn-ghost btn-lg" href="/">← Volver al inicio</a>
+<main id="top">
+<section class="hero">
+<div class="grid-bg"></div>
+<span class="cross c1"></span><span class="cross c2"></span><span class="cross c3"></span>
+<div class="wrap hero-grid">
+<div>
+<span class="coord-tag">// PARA TOPÓGRAFOS</span>
+<h1>¿Eres topógrafo? <span class="accent">Recibe solicitudes de clientes en tu zona.</span></h1>
+<p class="lead">Recibimos solicitudes de clientes de topografía en todo México. Buscamos un topógrafo por zona para atenderlas. Regístrate sin costo: si tu zona sigue libre, las solicitudes que entren son para ti.</p>
 </div>
+<form class="side-form" name="recrutamento-mx" data-netlify="true" data-netlify-honeypot="bot-field" action="/gracias-registro/" method="POST">
+<input name="form-name" type="hidden" value="recrutamento-mx"/>
+<input name="bot-field" type="hidden" />
+<h3>Regístrate</h3>
+<p class="sub"></p>
+<div class="field"><label>Nombre</label><input name="nome" type="text" placeholder="Tu nombre" required/></div>
+<div class="field"><label>Email</label><input name="email" type="email" placeholder="email@ejemplo.com.mx" required/></div>
+<div class="field"><label>Ciudad o estado</label><input name="zona" type="text" placeholder="Ej.: Monterrey" required/></div>
+<div class="field"><label>Teléfono (opcional)</label><input name="telefone" type="tel" placeholder="55 1234 5678"/></div>
+<button class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Quiero recibir solicitudes</button>
+</form>
+</div>
+</section>
 </main>
+
 <footer>
 <div class="wrap">
 <div class="fg">
@@ -69,6 +82,7 @@
 </div>
 </footer>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P8H7CSNNMR"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P8H7CSNNMR');gtag('event','lead_submitted',{'country':'mx'});</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P8H7CSNNMR');</script>
+<script src="/nav.js" defer></script>
 </body>
 </html>
