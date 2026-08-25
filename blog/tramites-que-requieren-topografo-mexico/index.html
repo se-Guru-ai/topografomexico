@@ -80,116 +80,116 @@
 <script>document.addEventListener('DOMContentLoaded',function(){var nav=document.querySelector('nav.main');if(!nav)return;var btn=document.getElementById('navToggle');if(!btn)return;btn.addEventListener('click',function(){var open=nav.classList.toggle('open');btn.classList.toggle('open',open);btn.setAttribute('aria-expanded',String(open));});document.addEventListener('click',function(e){if(!nav.contains(e.target)&&e.target!==btn&&!btn.contains(e.target)){nav.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');}});nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');});});});</script>
 
 <main>
-  <div class="wrap">
-    <div class="breadcrumb"><a href="/">Inicio</a><span class="sep">/</span><a href="/blog/">Blog</a><span class="sep">/</span><b>¿Qué trámites urbanísticos y catastrales requieren topógrafo...</b></div>
-    <div class="art-hero">
-      <span class="chip">TRÁMITES</span>
-      <h1>¿Qué trámites urbanísticos y catastrales requieren topógrafo en México?</h1>
-      <p class="dek">Lista completa de procedimientos — licencias, subdivisiones, deslindes, actualizaciones catastrales — y qué se pide en cada uno en México.</p>
-      <div class="art-meta">
-        <span>Junio 2026</span>
-        <span>9 min de lectura</span>
-      </div>
+ <div class="wrap">
+  <div class="breadcrumb"><a href="/">Inicio</a><span class="sep">/</span><a href="/blog/">Blog</a><span class="sep">/</span><b>¿Qué trámites urbanísticos y catastrales requieren topógrafo...</b></div>
+  <div class="art-hero">
+   <span class="chip">TRÁMITES</span>
+   <h1>¿Qué trámites urbanísticos y catastrales requieren topógrafo en México?</h1>
+   <p class="dek">Lista completa de procedimientos — licencias, subdivisiones, deslindes, actualizaciones catastrales — y qué se pide en cada uno en México.</p>
+   <div class="art-meta">
+    <span>Junio 2026</span>
+    <span>9 min de lectura</span>
+   </div>
+  </div>
+  <div class="art-band">
+   <div class="g"></div>
+   <span class="tag">TRÁMITES · CATASTRO · LICENCIAS</span>
+   <span class="coord">LAT 19.4326 · LON -99.1332 · ITRF2008</span>
+  </div>
+
+  <div class="art-layout">
+   <article class="body">
+
+    <h2 id="s1"><span class="hx">01</span>Trámites municipales de construcción</h2>
+    <p>Los ayuntamientos y alcaldías de México exigen plano topográfico firmado en una variedad de trámites de construcción. Los más comunes son:</p>
+    <div class="law-grid">
+     <div class="law-card">
+      <span class="tag">Más frecuente</span>
+      <h4>Licencia de obra nueva</h4>
+      <p>Para construir una edificación nueva en un predio, la mayoría de los ayuntamientos exigen plano topográfico del terreno georreferenciado en ITRF2008, firmado por topógrafo , como parte del expediente de licencia.</p>
+     </div>
+     <div class="law-card">
+      <span class="tag">Muy frecuente</span>
+      <h4>Licencia de ampliación</h4>
+      <p>Para ampliar una edificación existente, se requiere plano actualizado del predio con la situación actual de la construcción y el área de ampliación proyectada, firmado por topógrafo.</p>
+     </div>
+     <div class="law-card">
+      <span class="tag">Frecuente</span>
+      <h4>Cambio de uso de suelo</h4>
+      <p>Para cambiar el uso de un inmueble (de habitacional a comercial, por ejemplo), el ayuntamiento exige plano topográfico actualizado del predio y la edificación existente.</p>
+     </div>
+     <div class="law-card">
+      <span class="tag">Obra civil</span>
+      <h4>Obras de urbanización</h4>
+      <p>Fraccionamientos, condominios, conjuntos habitacionales y obras de infraestructura (vialidades, redes) requieren estudios topográficos completos como base del proyecto de ingeniería.</p>
+     </div>
     </div>
-    <div class="art-band">
-      <div class="g"></div>
-      <span class="tag">TRÁMITES · CATASTRO · LICENCIAS</span>
-      <span class="coord">LAT 19.4326 · LON -99.1332 · ITRF2008</span>
-    </div>
 
-    <div class="art-layout">
-      <article class="body">
+    <h2 id="s2"><span class="hx">02</span>Trámites catastrales</h2>
+    <p>El catastro municipal requiere plano topográfico firmado para actualizar, modificar o corregir sus registros:</p>
+    <ul>
+     <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Actualización de superficie: cuando la superficie real difiere del registro catastral</span></li>
+     <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Modificación de linderos: cuando los linderos físicos han cambiado o nunca fueron medidos correctamente</span></li>
+     <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Subdivisión catastral: división de un predio en dos o más lotes con nuevas claves catastrales</span></li>
+     <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Fusión catastral: unión de dos o más predios en uno solo</span></li>
+     <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Relotificación: reorganización de los límites entre varios predios vecinos</span></li>
+     <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Alta de predio nuevo: incorporación al catastro de un predio que nunca fue registrado</span></li>
+    </ul>
+    <div class="callout"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 3v6c0 5-3.4 8.5-8 11-4.6-2.5-8-6-8-11V5l8-3z"/><path d="M9 12l2 2 4-4"/></svg><p>Los requisitos técnicos del plano varían entre municipios — escala, capas de información, formato digital. Antes de encargar el levantamiento, consulta con el catastro de tu municipio qué requisitos específicos debe cumplir el plano.</p></div>
 
-        <h2 id="s1"><span class="hx">01</span>Trámites municipales de construcción</h2>
-        <p>Los ayuntamientos y alcaldías de México exigen plano topográfico firmado en una variedad de trámites de construcción. Los más comunes son:</p>
-        <div class="law-grid">
-          <div class="law-card">
-            <span class="tag">Más frecuente</span>
-            <h4>Licencia de obra nueva</h4>
-            <p>Para construir una edificación nueva en un predio, la mayoría de los ayuntamientos exigen plano topográfico del terreno georreferenciado en ITRF2008, firmado por topógrafo con cédula SEP, como parte del expediente de licencia.</p>
-          </div>
-          <div class="law-card">
-            <span class="tag">Muy frecuente</span>
-            <h4>Licencia de ampliación</h4>
-            <p>Para ampliar una edificación existente, se requiere plano actualizado del predio con la situación actual de la construcción y el área de ampliación proyectada, firmado por topógrafo.</p>
-          </div>
-          <div class="law-card">
-            <span class="tag">Frecuente</span>
-            <h4>Cambio de uso de suelo</h4>
-            <p>Para cambiar el uso de un inmueble (de habitacional a comercial, por ejemplo), el ayuntamiento exige plano topográfico actualizado del predio y la edificación existente.</p>
-          </div>
-          <div class="law-card">
-            <span class="tag">Obra civil</span>
-            <h4>Obras de urbanización</h4>
-            <p>Fraccionamientos, condominios, conjuntos habitacionales y obras de infraestructura (vialidades, redes) requieren estudios topográficos completos como base del proyecto de ingeniería.</p>
-          </div>
-        </div>
+    <h2 id="s3"><span class="hx">03</span>Trámites notariales y registrales</h2>
+    <p>Los notarios y el Registro Público de la Propiedad exigen plano catastral aprobado en una variedad de operaciones:</p>
+    <ul class="step-list">
+     <li><div class="num">1</div><div><strong>Compraventa de inmueble.</strong> Para formalizar la compraventa, el notario verifica que los datos del predio (superficie, linderos) en la escritura coincidan con el catastro. Si hay discrepancia, exige su corrección antes de firmar.</div></li>
+     <li><div class="num">2</div><div><strong>Subdivisión notarial.</strong> Para dividir un predio entre copropietarios o para vender una fracción, se requiere plano catastral de cada nuevo lote, aprobado por el catastro municipal.</div></li>
+     <li><div class="num">3</div><div><strong>Donación o herencia.</strong> Para inscribir una donación o tramitar adjudicación de herencia, el notario puede requerir plano actualizado si la descripción del inmueble en la escritura original es imprecisa.</div></li>
+     <li><div class="num">4</div><div><strong>Constitución de condominio.</strong> Para constituir un régimen de propiedad en condominio (departamentos, locales comerciales), se requiere plano arquitectónico y topográfico del conjunto, aprobado por las autoridades.</div></li>
+     <li><div class="num">5</div><div><strong>Cancelación de hipoteca.</strong> Aunque no siempre exige nuevo plano, si la descripción del inmueble ha cambiado, el Registro puede requerir plano actualizado para inscribir la cancelación.</div></li>
+    </ul>
 
-        <h2 id="s2"><span class="hx">02</span>Trámites catastrales</h2>
-        <p>El catastro municipal requiere plano topográfico firmado para actualizar, modificar o corregir sus registros:</p>
-        <ul>
-          <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Actualización de superficie: cuando la superficie real difiere del registro catastral</span></li>
-          <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Modificación de linderos: cuando los linderos físicos han cambiado o nunca fueron medidos correctamente</span></li>
-          <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Subdivisión catastral: división de un predio en dos o más lotes con nuevas claves catastrales</span></li>
-          <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Fusión catastral: unión de dos o más predios en uno solo</span></li>
-          <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Relotificación: reorganización de los límites entre varios predios vecinos</span></li>
-          <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Alta de predio nuevo: incorporación al catastro de un predio que nunca fue registrado</span></li>
-        </ul>
-        <div class="callout"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 3v6c0 5-3.4 8.5-8 11-4.6-2.5-8-6-8-11V5l8-3z"/><path d="M9 12l2 2 4-4"/></svg><p>Los requisitos técnicos del plano varían entre municipios — escala, capas de información, formato digital. Antes de encargar el levantamiento, consulta con el catastro de tu municipio qué requisitos específicos debe cumplir el plano.</p></div>
+    <h2 id="s4"><span class="hx">04</span>Regularización y ejidos</h2>
+    <p>Una categoría especial son los predios en proceso de regularización o derivados de ejidos:</p>
+    <ul>
+     <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Certificados de derechos ejidales: el PROCEDE histórico y los programas actuales de regularización ejidal exigen levantamiento topográfico</span></li>
+     <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Desincorporación de ejido: cuando tierras ejidales se incorporan al régimen de propiedad privada (dominio pleno), se requiere levantamiento topográfico de los lotes</span></li>
+     <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Programas estatales de regularización: estados como Estado de México, Jalisco o CDMX tienen programas de regularización de colonias populares que incluyen levantamientos topográficos masivos</span></li>
+     <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>SEDATU: los programas federales de regularización coordinados por la Secretaría de Desarrollo Agrario, Territorial y Urbano también exigen planos topográficos firmados</span></li>
+    </ul>
 
-        <h2 id="s3"><span class="hx">03</span>Trámites notariales y registrales</h2>
-        <p>Los notarios y el Registro Público de la Propiedad exigen plano catastral aprobado en una variedad de operaciones:</p>
-        <ul class="step-list">
-          <li><div class="num">1</div><div><strong>Compraventa de inmueble.</strong> Para formalizar la compraventa, el notario verifica que los datos del predio (superficie, linderos) en la escritura coincidan con el catastro. Si hay discrepancia, exige su corrección antes de firmar.</div></li>
-          <li><div class="num">2</div><div><strong>Subdivisión notarial.</strong> Para dividir un predio entre copropietarios o para vender una fracción, se requiere plano catastral de cada nuevo lote, aprobado por el catastro municipal.</div></li>
-          <li><div class="num">3</div><div><strong>Donación o herencia.</strong> Para inscribir una donación o tramitar adjudicación de herencia, el notario puede requerir plano actualizado si la descripción del inmueble en la escritura original es imprecisa.</div></li>
-          <li><div class="num">4</div><div><strong>Constitución de condominio.</strong> Para constituir un régimen de propiedad en condominio (departamentos, locales comerciales), se requiere plano arquitectónico y topográfico del conjunto, aprobado por las autoridades.</div></li>
-          <li><div class="num">5</div><div><strong>Cancelación de hipoteca.</strong> Aunque no siempre exige nuevo plano, si la descripción del inmueble ha cambiado, el Registro puede requerir plano actualizado para inscribir la cancelación.</div></li>
-        </ul>
-
-        <h2 id="s4"><span class="hx">04</span>Regularización y ejidos</h2>
-        <p>Una categoría especial son los predios en proceso de regularización o derivados de ejidos:</p>
-        <ul>
-          <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Certificados de derechos ejidales: el PROCEDE histórico y los programas actuales de regularización ejidal exigen levantamiento topográfico</span></li>
-          <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Desincorporación de ejido: cuando tierras ejidales se incorporan al régimen de propiedad privada (dominio pleno), se requiere levantamiento topográfico de los lotes</span></li>
-          <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>Programas estatales de regularización: estados como Estado de México, Jalisco o CDMX tienen programas de regularización de colonias populares que incluyen levantamientos topográficos masivos</span></li>
-          <li><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span>SEDATU: los programas federales de regularización coordinados por la Secretaría de Desarrollo Agrario, Territorial y Urbano también exigen planos topográficos firmados</span></li>
-        </ul>
-
-        <h2 id="s5"><span class="hx">05</span>Preguntas frecuentes</h2>
-        <div class="faq">
+    <h2 id="s5"><span class="hx">05</span>Preguntas frecuentes</h2>
+    <div class="faq">
 <details class="q" open><summary>¿El catastro acepta cualquier plano topográfico?<span class="pm">+</span></summary><div class="a">No. El catastro municipal tiene requisitos técnicos específicos (escala, sistema de referencia, información mínima, formato digital). Un plano elaborado para otro propósito puede no cumplir esos requisitos. Pide al topógrafo que elabore el plano específicamente con los requisitos del catastro de tu municipio.</div></details>
 <details class="q"><summary>¿Necesito un topógrafo diferente para el catastro y para la notaría?<span class="pm">+</span></summary><div class="a">No. El mismo topógrafo puede elaborar el plano catastral que sirva tanto para la actualización catastral como para la notaría y el Registro Público. Lo importante es que el plano cumpla los requisitos de cada institución, que el topógrafo conoce.</div></details>
 <details class="q"><summary>¿El trámite ante el catastro tiene costo?<span class="pm">+</span></summary><div class="a">Sí. Además de los honorarios del topógrafo, el catastro cobra derechos municipales por la actualización. El monto varía según el municipio y el tipo de trámite. Consúltalo en la tesorería o en el catastro de tu municipio antes de iniciar, porque cada uno publica su propia tarifa.</div></details>
 <details class="q"><summary>¿Cuánto tarda la aprobación del catastro?<span class="pm">+</span></summary><div class="a">Varía enormemente según el municipio. Municipios con sistemas digitales modernos resuelven en 1 a 3 semanas. Municipios con procesos más lentos pueden tardar 1 a 3 meses. Pregunta al catastro de tu municipio antes de iniciar para planificar los plazos.</div></details>
-        </div>
-      </article>
-
-      <aside class="toc">
-        <div class="lbl">En este artículo</div>
-        <ol id="toc-list">
-          <li><a href="#s1">Trámites municipales de construcción</a></li>
-          <li><a href="#s2">Trámites catastrales</a></li>
-          <li><a href="#s3">Trámites notariales y registrales</a></li>
-          <li><a href="#s4">Regularización y ejidos</a></li>
-          <li><a href="#s5">Preguntas frecuentes</a></li>
-        </ol>
-        <div class="cta">
-          <h4>¿Necesitas un topógrafo?</h4>
-          <p>Cédula SEP en tu estado. Cotización sin compromiso, normalmente en menos de 24 horas.</p>
-          <a class="btn btn-primary" style="width:100%;justify-content:center" href="/#contacto">Solicitar Cotización →</a>
-        </div>
-      </aside>
     </div>
+   </article>
+
+   <aside class="toc">
+    <div class="lbl">En este artículo</div>
+    <ol id="toc-list">
+     <li><a href="#s1">Trámites municipales de construcción</a></li>
+     <li><a href="#s2">Trámites catastrales</a></li>
+     <li><a href="#s3">Trámites notariales y registrales</a></li>
+     <li><a href="#s4">Regularización y ejidos</a></li>
+     <li><a href="#s5">Preguntas frecuentes</a></li>
+    </ol>
+    <div class="cta">
+     <h4>¿Necesitas un topógrafo?</h4>
+     <p>Cédula SEP en tu estado. Cotización sin compromiso, normalmente en menos de 24 horas.</p>
+     <a class="btn btn-primary" style="width:100%;justify-content:center" href="/#contacto">Solicitar Cotización →</a>
+    </div>
+   </aside>
   </div>
+ </div>
 
-  <section class="ctaband">
-    <div class="wrap">
-      <h2>¿Necesitas un profesional de topografía en tu estado?</h2>
-      <p>Profesionales de topografía en México. Cotización sin compromiso, normalmente en menos de 24 horas.</p>
-      <a class="btn btn-primary btn-lg" href="/#contacto">Solicitar Cotización Gratuita →</a>
-    </div>
-  </section>
+ <section class="ctaband">
+  <div class="wrap">
+   <h2>¿Necesitas un profesional de topografía en tu estado?</h2>
+   <p>Profesionales de topografía en México. Cotización sin compromiso, normalmente en menos de 24 horas.</p>
+   <a class="btn btn-primary btn-lg" href="/#contacto">Solicitar Cotización Gratuita →</a>
+  </div>
+ </section>
 </main>
 
 <footer>
