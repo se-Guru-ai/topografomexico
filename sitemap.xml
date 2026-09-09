@@ -66,7 +66,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.topografomexico.com.mx/topografo-guanajuato/</loc><lastmod>2026-09-03</lastmod>
+    <loc>https://www.topografomexico.com.mx/topografo-guanajuato/</loc><lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.topografomexico.com.mx/topografo-guanajuato-ciudad/</loc><lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -86,7 +91,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.topografomexico.com.mx/topografo-tamaulipas/</loc><lastmod>2026-09-03</lastmod>
+    <loc>https://www.topografomexico.com.mx/topografo-tamaulipas/</loc><lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -312,6 +317,11 @@
   </url>
   <url>
     <loc>https://www.topografomexico.com.mx/topografo-ciudad-obregon/</loc><lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.topografomexico.com.mx/topografo-ciudad-victoria/</loc><lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
