@@ -958,3 +958,22 @@ nav.main a:last-child{border-bottom:0}
 
   .soon-form .sub{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:14px}
 .soon-body,.work-grid{grid-template-columns:1fr}
+
+/* Tabela de comparação */
+.cmp{width:100%;border-collapse:collapse;margin:18px 0 24px;font-size:14.5px}
+.cmp th,.cmp td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-2);line-height:1.55}
+.cmp th{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500;border-bottom:1px solid var(--line-2)}
+.cmp td:first-child{color:var(--ink);font-weight:600;white-space:nowrap}
+.cmp-wrap{overflow-x:auto}
+
+/* ⚠️ 11-set-2026: a coluna de leitura das páginas legais hugava a esquerda de um
+   wrap de 1200px e parecia texto em meio ecrã. Os artigos do blog não têm esse
+   aspecto porque vivem no `.art-layout`, que é grelha centrada com barra lateral.
+   Estas páginas não têm barra lateral: centra-se a coluna. Selector de FILHO
+   DIRECTO de propósito — dentro do `.art-layout` o `.body` é item de grelha e
+   centrá-lo afastá-lo-ia da barra lateral. */
+/* Páginas legais: coluna larga, sem barra lateral. Só filho directo do
+   `.wrap` — nos artigos o `.body` é item do `.art-layout`. */
+main.wrap > .body{max-width:960px}
+main.wrap > .body .cmp-wrap{width:100%}
+main.wrap > .body .cmp td:first-child{white-space:normal}
