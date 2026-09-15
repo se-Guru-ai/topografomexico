@@ -211,7 +211,7 @@
   }
   $("#ins-f").addEventListener("input", function () { sincroniza(); pintaResumo(); });
   $("#ins-f").addEventListener("change", function () { sincroniza(); pintaResumo(); });
-  // ⚠️ A submissão é a do browser (POST ao Netlify). Aqui só se impede um envio com o
+  // A submissão é a do browser (POST ao Netlify). Aqui só se impede um envio com o
   // passo 1 ou 2 por validar — que é possível se alguém carregar em Enter no passo 3.
   $("#ins-f").addEventListener("submit", function (ev) {
     var err = valida(1) || valida(2);
