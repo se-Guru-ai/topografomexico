@@ -495,12 +495,33 @@ footer .footer-legal .lre img{display:block;height:46px;width:auto}
 footer .footer-legal .cr{width:100%;font-family:var(--mono);font-size:12px;color:#65778f;margin-top:2px}
 
   /* === Barra de consentimento de cookies (Consent Mode v2) === */
-  .cookie-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:#0b1626;border-top:1px solid #1c2a3f;box-shadow:0 -6px 24px rgba(0,0,0,.28);padding:15px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px}
+  /* ⚠️ A BARRA PRETA SAIU (19-09-2026, o Luis: «melhora a puta dos banners!!!»).
+     O que lá estava: `background:#0b1626` — quase preto — a ocupar a largura toda no
+     fundo do ecrã, com texto `#9aacc2` a 13px por cima. Três problemas, e nenhum era o
+     texto: (1) num site de fundo claro uma barra preta de ponta a ponta lê-se como
+     alerta de sistema, e a reacção a um alerta é fechá-lo, não lê-lo; (2) aquele
+     cinzento-azul sobre aquele fundo não chega ao mínimo de contraste — quem não lê não
+     decide, encolhe os ombros; (3) as cores estavam escritas à mão e não existiam em
+     mais lado nenhum do site: o banner não parecia nosso.
+     📌 Medido no GA4: com esta barra, o México perdeu 96% da medição, as Filipinas 88%,
+     Espanha 78%. O Portugal perdeu 27% — e a diferença não é a lei, é o hábito. Um
+     banner que assusta mede-se em dados que desaparecem.
+     ⬜ Agora é um cartão no canto, com os TOKENS do próprio site (`--panel`, `--line`,
+     `--ink-2`) e os botões que já existem. Não tapa a página, não grita, e lê-se. */
+  .cookie-bar{position:fixed;left:16px;right:16px;bottom:16px;z-index:200;
+    max-width:420px;margin-left:auto;margin-right:auto;
+    background:var(--panel);border:1px solid var(--line-2);border-radius:12px;
+    box-shadow:0 8px 28px rgba(13,27,46,.16);
+    padding:16px 18px;display:flex;flex-direction:column;gap:12px}
   .cookie-bar[hidden]{display:none}
-  .cookie-bar .cb-txt{margin:0;flex:1 1 340px;color:#9aacc2;font-size:13px;line-height:1.55}
-  .cookie-bar .cb-txt a{color:#9aacc2;text-decoration:underline}
+  .cookie-bar .cb-txt{margin:0;color:var(--ink-2);font-size:13.5px;line-height:1.6}
+  .cookie-bar .cb-txt a{color:var(--brand-deep);text-decoration:underline}
   .cookie-bar .cb-act{display:flex;gap:10px;flex-shrink:0}
-  @media(max-width:560px){.cookie-bar .cb-act{width:100%}.cookie-bar .cb-act .btn{flex:1}}
+  /* o «aceitar» é o caminho normal e parece-o; o «recusar» continua visível, legível e
+     do mesmo tamanho — um botão de recusar escondido é consentimento que não vale. */
+  .cookie-bar .cb-act .btn{flex:1;justify-content:center}
+  @media(min-width:721px){.cookie-bar{left:auto;right:20px;bottom:20px;margin:0}}
+  @media(max-width:720px){.cookie-bar{max-width:none}}
   .form-nota{font-family:var(--mono);font-size:11px;line-height:1.5;color:var(--muted);margin-top:14px}
   .form-nota a{color:var(--muted);text-decoration:underline}
   .reabrir-cookies{cursor:pointer}
