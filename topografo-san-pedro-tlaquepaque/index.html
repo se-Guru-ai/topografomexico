@@ -196,11 +196,11 @@
 <input name="bot-field" type="hidden" /><input name="estado" type="hidden" value="Jalisco"/><input name="ciudad" type="hidden" value="San Pedro Tlaquepaque"/><input name="slot" type="hidden" value="san-pedro-tlaquepaque"/>
 <h3>Solicitar cotización</h3>
 <p class="sub">// ciudad: San Pedro Tlaquepaque · respuesta &lt; 24h</p>
-<div class="field"><label>Nombre</label><input name="nome" type="text" placeholder="Tu nombre" required/></div>
-<div class="field"><label>Teléfono</label><input name="telefone" type="tel" placeholder="55 1234 5678" required/></div>
-<div class="field"><label>Email</label><input name="email" type="email" placeholder="email@ejemplo.com.mx" required/></div>
-<div class="field"><label>Tipo de trabajo</label><select name="tipo" required><option value="">¿Qué necesitas?</option><option value="Levantamiento topográfico">Levantamiento topográfico</option><option value="Deslinde de predios">Deslinde de predios</option><option value="Subdivisión de lotes">Subdivisión de lotes</option><option value="Trazo y nivelación">Trazo y nivelación</option><option value="Topografía con dron">Topografía con dron</option><option value="No sé">No sé</option><option value="Otros">Otros</option></select></div>
-<div class="field"><label>Superficie y finalidad</label><textarea name="descripcion" placeholder="Superficie aproximada y finalidad..." rows="3" required></textarea></div>
+<div class="field"><label>Nombre</label><input aria-label="Nombre" name="nome" type="text" placeholder="Tu nombre" required/></div>
+<div class="field"><label>Teléfono</label><input aria-label="Teléfono" name="telefone" type="tel" placeholder="55 1234 5678" required/></div>
+<div class="field"><label>Email</label><input aria-label="Email" name="email" type="email" placeholder="email@ejemplo.com.mx" required/></div>
+<div class="field"><label>Tipo de trabajo</label><select aria-label="Tipo de trabajo" name="tipo" required><option value="">¿Qué necesitas?</option><option value="Levantamiento topográfico">Levantamiento topográfico</option><option value="Deslinde de predios">Deslinde de predios</option><option value="Subdivisión de lotes">Subdivisión de lotes</option><option value="Trazo y nivelación">Trazo y nivelación</option><option value="Topografía con dron">Topografía con dron</option><option value="No sé">No sé</option><option value="Otros">Otros</option></select></div>
+<div class="field"><label>Superficie y finalidad</label><textarea aria-label="Superficie y finalidad" name="descripcion" placeholder="Superficie aproximada y finalidad..." rows="3" required></textarea></div>
 <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Enviar solicitud →</button>
 </form><script>(function(){var f=document.currentScript.previousElementSibling;if(!f||f.tagName!=="FORM")return;f.addEventListener("submit",function(){var b=f.querySelector("button");if(!b||b.dataset.enviando)return;b.dataset.enviando="1";setTimeout(function(){b.disabled=true;b.style.opacity=".6";b.style.cursor="default";b.textContent=b.dataset.enviandoTexto||"Enviando...";},0);});})();</script>
 <div class="side-info">
